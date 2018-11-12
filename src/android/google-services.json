@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "170065016294",
+    "firebase_url": "https://lavash-1e6c1.firebaseio.com",
+    "project_id": "lavash-1e6c1",
+    "storage_bucket": "lavash-1e6c1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:170065016294:android:4e38165209d9528f",
+        "android_client_info": {
+          "package_name": "com.avsoft.lavash"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "170065016294-qi0guvk7h5pior6bqmt52bi78hmu76tm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.avsoft.lavash",
+            "certificate_hash": "46ce3bce67461a6123afbcc0cccd64d7f937bec3"
+          }
+        },
+        {
+          "client_id": "170065016294-i8eg6s2qlulc6vkmuufcc9an374fdfod.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcMa9qn5DuZqDUbUawFO8r22_k3j1s-gA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "170065016294-i8eg6s2qlulc6vkmuufcc9an374fdfod.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "170065016294-imv5tbuc1tv6pdissenfrbccim2u46rm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.avsoft.lavash"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
