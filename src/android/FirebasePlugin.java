@@ -637,6 +637,33 @@ public class FirebasePlugin extends CordovaPlugin {
                             
                             // does this fire in cordova?
                             // TODO: return credential
+							JSONObject returnResults = new JSONObject();
+                            try {
+                                String verificationId = null;
+                                String code = null;
+								
+                                Field[] fields = credential.getClass().getDeclaredFields();
+                                for (Field field : fields) {
+                                    Class type = field.getType();
+                                    if(type == String.class){
+                                        String value = getPrivateField(credential, field);
+                                        if(value == null) continue;
+                                        if(value.length() > 100) verificationId = value;
+                                        else if(value.length() >= 4 && value.length() <= 6) code = value;
+                                    }
+                                }
+                                returnResults.put("verified", verificationId != null && code != null);
+                                returnResults.put("verificationId", verificationId);
+                                returnResults.put("code", code);
+                                returnResults.put("instantVerification", true);
+                            } catch(JSONException e){
+                                Crashlytics.logException(e);
+                                callbackContext.error(e.getMessage());
+                                return;
+                            }
+                            PluginResult pluginresult = new PluginResult(PluginResult.Status.OK, returnResults);
+                            pluginresult.setKeepCallback(true);
+							callbackContext.sendPluginResult(pluginresult);
                         }
 
                         @Override
@@ -679,6 +706,15 @@ public class FirebasePlugin extends CordovaPlugin {
                             callbackContext.sendPluginResult(pluginresult);
                         }
                     };
+					
+					private static String getPrivateField(PhoneAuthCredential credential, Field field) {
+						try {
+							field.setAccessible(true);
+							return (String) field.get(credential);
+						} catch (IllegalAccessException e) {
+							return null;
+						}
+					}
 
                     PhoneAuthProvider.getInstance().verifyPhoneNumber(
                         number,                 // Phone number to verify
