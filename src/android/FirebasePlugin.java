@@ -26,6 +26,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.lang.reflect.Field;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -657,7 +659,6 @@ public class FirebasePlugin extends CordovaPlugin {
                                 returnResults.put("code", code);
                                 returnResults.put("instantVerification", true);
                             } catch(JSONException e){
-                                Crashlytics.logException(e);
                                 callbackContext.error(e.getMessage());
                                 return;
                             }
