@@ -707,14 +707,7 @@ public class FirebasePlugin extends CordovaPlugin {
                         }
                     };
 					
-					private static String getPrivateField(PhoneAuthCredential credential, Field field) {
-						try {
-							field.setAccessible(true);
-							return (String) field.get(credential);
-						} catch (IllegalAccessException e) {
-							return null;
-						}
-					}
+				
 
                     PhoneAuthProvider.getInstance().verifyPhoneNumber(
                         number,                 // Phone number to verify
@@ -733,6 +726,15 @@ public class FirebasePlugin extends CordovaPlugin {
             }
         });
     }
+	
+	private static String getPrivateField(PhoneAuthCredential credential, Field field) {
+		try {
+			field.setAccessible(true);
+			return (String) field.get(credential);
+		} catch (IllegalAccessException e) {
+			return null;
+		}
+	}
 
     private void setAlwaysShowNotification(final boolean alwaysShow) {
         FirebasePlugin.alwaysShowNotification = alwaysShow;
