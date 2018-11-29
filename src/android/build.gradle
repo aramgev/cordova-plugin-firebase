@@ -25,3 +25,6 @@ dependencies {
         transitive = true
     }
 }
+
+apply plugin: com.google.gms.googleservices.GoogleServicesPlugin
+apply plugin: com.crashlytics.tools.gradle.CrashlyticsPlugin
