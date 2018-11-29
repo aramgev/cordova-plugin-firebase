@@ -34,7 +34,7 @@ xmlns:android="http://schemas.android.com/apk/res/android">
 				<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 				<uses-permission android:name="android.permission.WAKE_LOCK" />
 		</config-file>
-		<config-file target="AndroidManifest.xml" parent="/*">
+		<config-file target="AndroidManifest.xml" parent="/manifest/application">
 				<meta-data
 					android:name="io.fabric.ApiKey"
 					android:value="d51bba0047d29932180529728e5663946d3545df"
