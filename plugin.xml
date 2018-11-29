@@ -23,12 +23,6 @@ xmlns:android="http://schemas.android.com/apk/res/android">
 				<param name="onload" value="true" />
 			</feature>
 		</config-file>
-		<config-file parent="/resources" target="res/values/strings.xml">
-			<string name="google_app_id">1:170065016294:android:4e38165209d9528f</string>
-		</config-file>
-		<config-file parent="/resources" target="res/values/strings.xml">
-			<string name="google_api_key">AIzaSyAcMa9qn5DuZqDUbUawFO8r22_k3j1s-gA</string>
-		</config-file>
 		<config-file target="AndroidManifest.xml" parent="/*">
 				<uses-permission android:name="android.permission.INTERNET" />
 				<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
