@@ -36,7 +36,5 @@
 	<string>1:170065016294:ios:4e38165209d9528f</string>
 	<key>DATABASE_URL</key>
 	<string>https://lavash-1e6c1.firebaseio.com</string>
-	<key>FirebaseAppDelegateProxyEnabled</key>
-	<true></true>
 </dict>
 </plist>
